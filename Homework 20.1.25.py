@@ -8,8 +8,7 @@ class User:
         self.email = email
         self.password = password
         self.birthday = birthday
-        self.created_at = created_at if created_at else datetime.now()
-
+        self.__created_at = datetime.now()
 
 
     def __str__(self):
