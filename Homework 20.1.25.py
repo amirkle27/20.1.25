@@ -75,9 +75,10 @@ class User:
     def created_at(self):
          return self.__created_at
 
+
 users = [('Berta', 'berta12@gmailcom', 'IamBerta!','1983, 4, 24'),
              ('Shosh', 'shoshinka@walla.co.il', 'Shosh$$$15', '2022, 8, 14'),
-             ('Gabi', 'ggmail.com', 'GabiWOW@#!', '2083, 10, 6')
+             ('Gal', 'ggmail.com', 'GalWOW@#!', '2083, 10, 6')
          ]
 
 for name, email, password, birthday in users:
@@ -90,6 +91,8 @@ for name, email, password, birthday in users:
         print(f"Email Error: {e}")
     except UserNameTooShortError as e:
         print(f"Name Error: {e} ")
+    except UserTooYoungError as e:
+        print(f"Age Error: {e}")
     except Exception as e:
         print(f"An unexpected error occurred: {e} ")
 
